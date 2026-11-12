@@ -25,10 +25,10 @@ export function ProductCard({ product, sizes = "(min-width: 1280px) 22vw, (min-w
               fill
               sizes={sizes}
               priority={priority}
-              className={`object-contain p-[6%] transition duration-500 ease-[var(--ease-tide)] group-hover:scale-[1.04] ${second ? "group-hover:opacity-0" : ""}`}
+              className={`object-contain p-[3%] transition duration-500 ease-[var(--ease-tide)] group-hover:scale-[1.04] ${second ? "group-hover:opacity-0" : ""}`}
             />
             {second && (
-              <Image src={second} alt="" fill sizes={sizes} className="object-contain p-[6%] opacity-0 transition duration-500 group-hover:opacity-100" />
+              <Image src={second} alt="" fill sizes={sizes} className="object-contain p-[3%] opacity-0 transition duration-500 group-hover:opacity-100" />
             )}
           </>
         ) : (

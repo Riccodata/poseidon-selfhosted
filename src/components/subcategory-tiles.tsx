@@ -45,7 +45,7 @@ export function SubcategoryTiles({ tiles }: { tiles: Tile[] }) {
           <Link href={`/category/${t.handle}`} className="group block">
             <div className="relative aspect-square overflow-hidden rounded-[10px] bg-tile">
               {t.image && (
-                <Image src={t.image} alt="" fill sizes="(min-width: 1280px) 15vw, (min-width: 1024px) 18vw, (min-width: 640px) 30vw, 46vw" className="object-contain p-[10%] transition duration-500 group-hover:scale-105" />
+                <Image src={t.image} alt="" fill sizes="(min-width: 1280px) 15vw, (min-width: 1024px) 18vw, (min-width: 640px) 30vw, 46vw" className="object-cover transition duration-500 group-hover:scale-105" />
               )}
             </div>
             <p className="mt-2 text-[15px] font-medium leading-tight group-hover:text-coral">{t.name}</p>
