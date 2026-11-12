@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import type { ProductSummary } from "@/lib/medusa";
 import { ProductCard } from "./product-card";
 import { lowerName } from "@/lib/site";
+import { SplitHeading } from "./text-reveal";
 
 export type RailTab = { handle: string; name: string; products: ProductSummary[] };
 
@@ -25,7 +26,7 @@ export function ProductRail({ title, tabs }: { title: string; tabs: RailTab[] })
     <section aria-labelledby="rail-title" className="bg-paper">
       <div className="mx-auto max-w-[1400px] px-4 pb-24 md:px-8">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <h2 id="rail-title" className="text-3xl font-semibold tracking-tight md:text-4xl">{title}</h2>
+          <SplitHeading id="rail-title" text={title} className="text-3xl font-semibold tracking-tight md:text-4xl" />
           <div className="flex items-center gap-2">
             <button type="button" onClick={() => nudge(-1)} aria-label="Scroll back" className="flex h-11 w-11 items-center justify-center rounded-full border border-line hover:border-ink">
               <ArrowLeft size={18} />

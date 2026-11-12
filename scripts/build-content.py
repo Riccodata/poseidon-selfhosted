@@ -51,6 +51,14 @@ def blocks_from_lines(lines):
 
 
 # ---- journal -------------------------------------------------------------------------------------
+COVER_ALT = {
+    "freshwater-vs-saltwater-aquarium": "A planted freshwater aquarium beside a saltwater reef tank in a living room",
+    "nitrogen-cycle-explained-how-to-cycle-an-aquarium": "A new aquarium cycling, with a water test kit in front",
+    "cichlid-care-guide": "Blue and yellow African cichlids over limestone rockwork",
+    "beginners-guide-to-plecos": "A zebra pleco and a bristlenose pleco on driftwood",
+    "sps-lps-soft-corals-guide": "A reef aquarium with soft, LPS and SPS corals",
+    "how-to-acclimate-new-fish": "A clownfish being drip acclimated in a small container below the aquarium",
+}
 spec = importlib.util.spec_from_file_location("posts", POSTS_PY)
 posts_mod = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(posts_mod)
@@ -58,13 +66,10 @@ cover_dir = os.path.join(ROOT, "public", "media", "journal")
 os.makedirs(cover_dir, exist_ok=True)
 journal = []
 for p in posts_mod.POSTS:
-    ext = os.path.splitext(p["cover"])[1].split("~")[0] or ".png"
-    cover_file = f"{p['slug']}{ext if ext in ('.png', '.jpg', '.jpeg') else '.png'}"
-    path = os.path.join(cover_dir, cover_file)
-    if not os.path.exists(path):
-        r = requests.get("https://static.wixstatic.com/media/" + p["cover"], timeout=60)
-        r.raise_for_status()
-        open(path, "wb").write(r.content)
+    # Covers are the Higgsfield journal images (graded), one per post, already in public/media/journal.
+    cover_file = f"{p['slug']}.jpg"
+    if not os.path.exists(os.path.join(cover_dir, cover_file)):
+        raise SystemExit(f"missing journal cover {cover_file}")
     body = blocks_from_lines(p["body"].strip().splitlines())
     words = sum(len((b.get("text") or " ".join(b.get("items", []))).split()) for b in body)
     journal.append({
@@ -75,7 +80,7 @@ for p in posts_mod.POSTS:
         "excerpt": p["excerpt"],
         "tags": p.get("hashtags", []),
         "cover": f"/media/journal/{cover_file}",
-        "coverAlt": p.get("cover_alt", ""),
+        "coverAlt": COVER_ALT.get(p["slug"], p.get("cover_alt", "")),
         "author": "Ricco Laroso",
         "date": "2026-10-22",
         "minutes": max(2, round(words / 220)),

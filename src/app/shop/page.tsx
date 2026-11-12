@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ProductGrid, PAGE_SIZE, SORTS } from "@/components/product-grid";
 import { getCategoryTree, listProducts } from "@/lib/medusa";
 import { BIG_CATEGORIES } from "@/lib/site";
+import { SlideIn, SplitHeading } from "@/components/text-reveal";
 
 export const revalidate = 3600;
 export const metadata: Metadata = { title: "Shop all", description: "Every coral, fish, plant and aquarium product in the Poseidon's Eden range." };
@@ -19,7 +20,7 @@ export default async function ShopPage({ searchParams }: Props) {
   ]);
   return (
     <div className="mx-auto max-w-[1400px] px-4 pb-24 pt-28 md:px-8 md:pt-32">
-      <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">Shop all</h1>
+      <SplitHeading as="h1" text="Shop all" className="text-4xl font-semibold tracking-tight md:text-6xl" />
       <p className="mt-4 max-w-2xl text-lg text-ink-2">
         {count.toLocaleString("en-AU")} corals, fish, plants and supplies. Pick a department or browse everything.
       </p>

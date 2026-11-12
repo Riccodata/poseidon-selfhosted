@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { EnvelopeSimple, Phone, Question } from "@phosphor-icons/react/dist/ssr";
 import { SITE } from "@/lib/site";
+import { SlideIn, SplitHeading } from "@/components/text-reveal";
 
 export const metadata: Metadata = { title: "Contact us", description: "Email or call the Poseidon's Eden team." };
 
 export default function ContactPage() {
   return (
     <div className="mx-auto max-w-[1400px] px-4 pb-24 pt-28 md:px-8 md:pt-32">
-      <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">Hi, how may I help you?</h1>
+      <SplitHeading as="h1" text="Hi, how may I help you?" className="text-4xl font-semibold tracking-tight md:text-6xl" />
       <p className="mt-4 max-w-xl text-lg text-ink-2">We&rsquo;re happy to help with orders, livestock and anything about your tank.</p>
       <div className="mt-14 grid gap-4 md:grid-cols-[1.4fr_1fr]">
         <a href={`mailto:${SITE.email}`} className="group flex min-h-[280px] flex-col rounded-[10px] bg-deep p-8 text-white">

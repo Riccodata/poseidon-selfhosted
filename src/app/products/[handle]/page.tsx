@@ -5,8 +5,14 @@ import { EnvelopeSimple, Truck, ShieldCheck } from "@phosphor-icons/react/dist/s
 import { ProductGallery } from "@/components/product-gallery";
 import { OptionPicker } from "@/components/option-picker";
 import { ProductCard } from "@/components/product-card";
+import { FactTiles } from "@/components/fact-tiles";
+import { HowItGetsToYou } from "@/components/how-it-gets-to-you";
+import { KeepBuilding } from "@/components/keep-building";
+import { Reveal } from "@/components/reveal";
+import { splitFacts } from "@/lib/facts";
 import { ancestry, getCategoryTree, getProduct, listProducts } from "@/lib/medusa";
-import { askHref, lowerName, shownBrand } from "@/lib/site";
+import { BIG_CATEGORIES, askHref, lowerName, shownBrand } from "@/lib/site";
+import { SlideIn, SplitHeading } from "@/components/text-reveal";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -49,6 +55,11 @@ export default async function ProductPage({ params }: Props) {
   }));
   const images = [...new Set([p.thumbnail, ...p.images.map((i) => i.url)].filter(Boolean) as string[])];
 
+  const root = deepest?.[0];
+  const livestock = ["corals", "marine-fish", "freshwater", "inverts", "plants"].includes(root?.handle ?? "");
+  const { title: factsTitle, facts, html: prose } = splitFacts(p.description);
+  const names = Object.fromEntries(BIG_CATEGORIES.map((b) => [b.handle, tree.byHandle.get(b.handle)?.name ?? b.handle]));
+
   const related = leaf
     ? (await listProducts({ categoryId: leaf.id, limit: 9 })).products.filter((x) => x.id !== p.id).slice(0, 8)
     : [];
@@ -72,7 +83,7 @@ export default async function ProductPage({ params }: Props) {
 
         <div>
           {shownBrand(p.brand) && <p className="text-sm text-ink-3">{shownBrand(p.brand)}</p>}
-          <h1 className="mt-1 text-3xl font-semibold leading-tight tracking-tight md:text-4xl">{p.title}</h1>
+          <SplitHeading as="h1" text={p.title} className="mt-1 text-3xl font-semibold leading-tight tracking-tight md:text-4xl" />
 
           <div className="mt-6 rounded-[10px] bg-paper-2 px-5 py-4">
             <p className="font-medium">Pricing coming soon</p>
@@ -97,10 +108,12 @@ export default async function ProductPage({ params }: Props) {
             <li className="flex gap-3"><ShieldCheck size={20} className="shrink-0 text-ink" />Live Arrival Guarantee: tell us within 24 hours for store credit or a replacement.</li>
           </ul>
 
-          {(p.description || p.infoSections.length > 0) && (
-            <div className="mt-10 border-t border-line pt-8">
+          {factsTitle && facts.length > 0 && <FactTiles title={factsTitle} facts={facts} />}
+
+          {(prose.trim() || p.infoSections.length > 0) && (
+            <Reveal className="mt-10 border-t border-line pt-8">
               <h2 className="text-lg font-semibold">About this product</h2>
-              <div className="copy mt-3" dangerouslySetInnerHTML={{ __html: p.description }} />
+              <div className="copy mt-3" dangerouslySetInnerHTML={{ __html: prose }} />
               {p.infoSections.map((s) => (
                 <details key={s.title} className="group border-t border-line py-4">
                   <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
@@ -110,10 +123,12 @@ export default async function ProductPage({ params }: Props) {
                   <div className="copy mt-3" dangerouslySetInnerHTML={{ __html: s.html }} />
                 </details>
               ))}
-            </div>
+            </Reveal>
           )}
         </div>
       </div>
+
+      {livestock && <HowItGetsToYou />}
 
       {related.length > 0 && leaf && (
         <section className="mt-24">
@@ -131,6 +146,11 @@ export default async function ProductPage({ params }: Props) {
             ))}
           </ul>
         </section>
+      )}
+      {root && (
+        <div className="-mx-4 mt-24 md:-mx-8">
+          <KeepBuilding from={root.handle} names={names} />
+        </div>
       )}
     </div>
   );

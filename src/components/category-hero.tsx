@@ -6,6 +6,7 @@ import { motion, useReducedMotion, useTransform } from "motion/react";
 import { useSectionProgress } from "./use-section-progress";
 import { LoopVideo } from "./loop-video";
 import { loopSrc } from "@/lib/site";
+import { SplitHeading } from "./text-reveal";
 
 /**
  * Department landing hero: the department's Higgsfield loop, sinking slightly slower than the page
@@ -35,7 +36,7 @@ export function CategoryHero({
   const src = loopSrc(media);
 
   return (
-    <section ref={ref} data-hero className="relative isolate flex min-h-[78dvh] items-end overflow-hidden bg-deep text-white">
+    <section ref={ref} data-hero data-tone="dark" className="relative isolate flex min-h-[78dvh] items-end overflow-hidden bg-deep text-white">
       <motion.div style={reduce ? undefined : { y: videoY }} className="absolute inset-0 -z-10 scale-110">
         <LoopVideo {...src} priority />
       </motion.div>
@@ -50,14 +51,7 @@ export function CategoryHero({
             </span>
           ))}
         </nav>
-        <motion.h1
-          initial={reduce ? false : { opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-4 text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl"
-        >
-          {name}
-        </motion.h1>
+        <SplitHeading as="h1" text={name} delay={0.1} className="mt-4 text-5xl font-semibold leading-[0.98] tracking-tight md:text-7xl" />
         <motion.p
           initial={reduce ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

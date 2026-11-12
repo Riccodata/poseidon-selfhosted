@@ -3,6 +3,7 @@ import { Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Header, type NavCategory } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { DepthGauge } from "@/components/depth-gauge";
 import { getCategoryTree } from "@/lib/medusa";
 import { BIG_CATEGORIES, SITE } from "@/lib/site";
 
@@ -55,6 +56,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <Header categories={categories} />
         <main id="main">{children}</main>
         <Footer categories={categories} />
+        <DepthGauge />
       </body>
     </html>
   );

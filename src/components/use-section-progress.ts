@@ -9,19 +9,22 @@ import { useMotionValue, useScroll, useMotionValueEvent, type MotionValue } from
  * mode "pin":  0 when the section's top reaches the viewport top, 1 when its bottom reaches the
  *              viewport bottom (the span a sticky child stays pinned).
  * mode "exit": 0 at the section's top at the viewport top, 1 when its bottom leaves the top.
+ * mode "through": 0 when the section's top enters at the viewport bottom, 1 when its bottom leaves the top.
  *
  * Deliberately not useScroll({ target }): its hardware-accelerated path mapped our ranges
  * inconsistently, and every effect here needs exact, monotonic progress.
  */
-export function useSectionProgress(ref: RefObject<HTMLElement | null>, mode: "pin" | "exit" = "pin"): MotionValue<number> {
+export function useSectionProgress(ref: RefObject<HTMLElement | null>, mode: "pin" | "exit" | "through" = "pin"): MotionValue<number> {
   const { scrollY } = useScroll();
   const progress = useMotionValue(0);
   const box = useRef({ top: 0, height: 1 });
 
   const update = (y: number) => {
     const { top, height } = box.current;
-    const span = mode === "pin" ? Math.max(1, height - window.innerHeight) : Math.max(1, height);
-    progress.set(Math.min(1, Math.max(0, (y - top) / span)));
+    const vh = window.innerHeight;
+    const start = mode === "through" ? top - vh : top;
+    const span = mode === "pin" ? Math.max(1, height - vh) : mode === "through" ? Math.max(1, height + vh) : Math.max(1, height);
+    progress.set(Math.min(1, Math.max(0, (y - start) / span)));
   };
 
   useEffect(() => {

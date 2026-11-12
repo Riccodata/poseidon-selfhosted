@@ -1,15 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE, BIG_CATEGORIES } from "@/lib/site";
 import type { NavCategory } from "./header";
 
 export function Footer({ categories }: { categories: NavCategory[] }) {
   const ordered = BIG_CATEGORIES.map((b) => categories.find((c) => c.handle === b.handle)).filter(Boolean) as NavCategory[];
   return (
-    <footer className="relative bg-deep text-foam">
+    <footer data-tone="dark" className="relative bg-deep text-foam">
       <div className="mx-auto max-w-[1400px] px-4 pb-10 pt-20 md:px-8">
         <div className="grid gap-12 md:grid-cols-[1.3fr_2fr]">
           <div>
-            <p className="text-[15px] font-semibold uppercase tracking-[0.22em]">Poseidon&rsquo;s Eden</p>
+            <Image src="/media/logo-wordmark.png" alt="Poseidon's Eden" width={1513} height={519} className="h-auto w-56" />
             <p className="mt-4 max-w-sm text-foam-2">
               Corals, marine and freshwater fish, plants and everything your aquarium needs, from our tanks to yours.
             </p>

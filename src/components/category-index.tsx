@@ -7,6 +7,7 @@ import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { ArrowUpRight } from "@phosphor-icons/react";
 import { LoopVideo } from "./loop-video";
 import { loopSrc, STILL } from "@/lib/site";
+import { SlideIn, SplitHeading } from "./text-reveal";
 
 export type IndexItem = { handle: string; name: string; count: number; line: string; media: string };
 
@@ -22,12 +23,10 @@ export function CategoryIndex({ items }: { items: IndexItem[] }) {
   return (
     <section aria-labelledby="departments" className="relative z-10 -mt-px bg-paper">
       <div className="mx-auto max-w-[1400px] px-4 py-20 md:px-8 md:py-28">
-        <h2 id="departments" className="max-w-2xl text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-          Shop the whole aquarium.
-        </h2>
-        <p className="mt-4 max-w-xl text-lg text-ink-2">
-          Ten departments, every product photographed and described by our team.
-        </p>
+        <SplitHeading id="departments" text="Shop the whole aquarium." className="max-w-2xl text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl" />
+        <SlideIn from="left" delay={0.2}>
+          <p className="mt-4 max-w-xl text-lg text-ink-2">Ten departments, every product photographed and described by our team.</p>
+        </SlideIn>
 
         {/* desktop: index + pinned preview */}
         <div className="mt-14 hidden grid-cols-[1.1fr_1fr] gap-14 lg:grid">

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { Reveal } from "@/components/reveal";
+import { LoopVideo } from "@/components/loop-video";
+import { CareStack } from "@/components/care-stack";
+import { ScrollWords, SlideIn, SplitHeading } from "@/components/text-reveal";
+import { loopSrc } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About us",
@@ -17,39 +19,51 @@ const POINTS = [
 export default function AboutPage() {
   return (
     <>
-      <section className="grain relative isolate overflow-hidden bg-deep text-white">
-        <Image src="/media/stills/cat-aquariums.jpg" alt="" fill priority sizes="100vw" className="-z-10 object-cover opacity-60" />
+      <section data-hero data-tone="dark" className="grain relative isolate overflow-hidden bg-deep text-white">
+        <div className="absolute inset-0 -z-10 opacity-70">
+          <LoopVideo {...loopSrc("care-quarantine")} priority />
+        </div>
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-deep via-deep/60 to-transparent" />
         <div className="mx-auto max-w-[1400px] px-4 pb-20 pt-40 md:px-8 md:pb-28 md:pt-48">
-          <h1 className="max-w-2xl text-5xl font-semibold leading-[1.02] tracking-tight md:text-7xl">Welcome to Poseidon&rsquo;s Eden</h1>
-          <p className="mt-6 max-w-xl text-lg text-foam md:text-xl">
-            We&rsquo;re a team of passionate reef keepers committed to bringing you healthy, vibrant corals, fish and everything your aquarium needs to thrive.
-          </p>
+          <SplitHeading as="h1" text="Welcome to Poseidon's Eden" className="max-w-2xl text-5xl font-semibold leading-[1.02] tracking-tight md:text-7xl" />
+          <SlideIn from="left" delay={0.35}>
+            <p className="mt-6 max-w-xl text-lg text-foam md:text-xl">
+              We&rsquo;re a team of passionate reef keepers committed to bringing you healthy, vibrant corals, fish and everything your aquarium needs to thrive.
+            </p>
+          </SlideIn>
         </div>
       </section>
+
       <section className="mx-auto max-w-[1400px] px-4 py-20 md:px-8 md:py-28">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr]">
-          <Reveal>
-            <p className="text-2xl leading-relaxed text-ink md:text-3xl md:leading-snug">
-              We believe every reef deserves the best start. From carefully selected corals and fish to quality supplies and complete aquarium setups, we give each order care and attention.
-            </p>
-            <p className="mt-6 max-w-xl text-lg text-ink-2">
+        <ScrollWords
+          className="max-w-5xl text-3xl font-semibold leading-[1.2] tracking-tight md:text-5xl"
+          text="We believe every reef deserves the best start. From carefully selected corals and fish to quality supplies and complete aquarium setups, we give each order care and attention."
+        />
+        <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+          <SlideIn from="left">
+            <p className="text-lg leading-relaxed text-ink-2 md:text-xl">
               Our livestock is acclimated in our own system, photographed accurately and packed with care, so what you see is what you get. Whether you&rsquo;re setting up your first tank or growing a mature reef, our team is here to make buying online simple, safe and worry-free.
             </p>
-          </Reveal>
+          </SlideIn>
           <ul className="space-y-8">
             {POINTS.map((p, i) => (
-              <Reveal as="li" key={p.title} delay={i * 0.08} className="border-t border-line pt-6">
+              <SlideIn as="li" key={p.title} from="right" delay={i * 0.1} className="border-t border-line pt-6">
                 <h2 className="text-xl font-semibold">{p.title}</h2>
                 <p className="mt-2 text-ink-2">{p.body}</p>
-              </Reveal>
+              </SlideIn>
             ))}
           </ul>
         </div>
-        <div className="mt-16 flex flex-wrap gap-3">
+      </section>
+
+      <CareStack />
+
+      <section className="mx-auto max-w-[1400px] px-4 py-20 md:px-8 md:py-28">
+        <SplitHeading text="Ready to start your tank?" className="max-w-3xl text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl" />
+        <SlideIn from="left" delay={0.2} className="mt-8 flex flex-wrap gap-3">
           <Link href="/shop" className="inline-flex h-12 items-center rounded-full bg-coral px-7 text-[15px] font-semibold text-white hover:bg-coral-hover">Browse the shop</Link>
           <Link href="/contact" className="inline-flex h-12 items-center rounded-full border border-line px-7 text-[15px] font-semibold hover:border-ink">Contact us</Link>
-        </div>
+        </SlideIn>
       </section>
     </>
   );

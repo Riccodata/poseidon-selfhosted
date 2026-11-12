@@ -5,8 +5,11 @@ import { CategoryHero } from "@/components/category-hero";
 import { ProductGrid, PAGE_SIZE, SORTS } from "@/components/product-grid";
 import { SubcategoryTiles, type Tile } from "@/components/subcategory-tiles";
 import { Reveal } from "@/components/reveal";
+import { CategoryIntro } from "@/components/category-intro";
+import { KeepBuilding } from "@/components/keep-building";
 import { ancestry, getCategoryTree, listProducts, type Category } from "@/lib/medusa";
-import { BIG_CATEGORIES, lowerName } from "@/lib/site";
+import { BIG_CATEGORIES, STILL, lowerName } from "@/lib/site";
+import { SlideIn, SplitHeading } from "@/components/text-reveal";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -60,6 +63,8 @@ export default async function CategoryPage({ params, searchParams }: Props) {
   ]);
 
   const crumbs = [{ name: "Shop", href: "/shop" }, ...chain.slice(0, -1).map((c) => ({ name: c.name, href: `/category/${c.handle}` }))];
+  const names = Object.fromEntries(BIG_CATEGORIES.map((b) => [b.handle, byHandle.get(b.handle)?.name ?? b.handle]));
+  const root = chain[0];
 
   if (big) {
     return (
@@ -67,25 +72,25 @@ export default async function CategoryPage({ params, searchParams }: Props) {
         <CategoryHero
           name={cat.name}
           line={big.line}
-          description={cat.description}
+          description=""
           count={count}
           media={big.media}
           crumbs={crumbs}
         />
+        {cat.description && <CategoryIntro text={cat.description} image={STILL[handle]} name={cat.name} />}
         {tiles.length > 0 && (
           <section className="mx-auto max-w-[1400px] px-4 pt-16 md:px-8 md:pt-24">
-            <Reveal>
-              <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">Browse {lowerName(cat.name)}</h2>
-            </Reveal>
+            <SplitHeading text={`Browse ${lowerName(cat.name)}`} className="text-3xl font-semibold tracking-tight md:text-4xl" />
             <div className="mt-8">
               <SubcategoryTiles tiles={tiles} />
             </div>
           </section>
         )}
         <section className="mx-auto max-w-[1400px] px-4 pb-24 pt-16 md:px-8 md:pt-24">
-          <h2 className="mb-6 text-3xl font-semibold tracking-tight md:text-4xl">All {lowerName(cat.name)}</h2>
+          <SplitHeading text={`All ${lowerName(cat.name)}`} className="mb-6 text-3xl font-semibold tracking-tight md:text-4xl" />
           <ProductGrid products={products} count={count} page={page} sort={sort} basePath={`/category/${handle}`} />
         </section>
+        <KeepBuilding from={handle} names={names} />
       </>
     );
   }
@@ -102,8 +107,12 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           </span>
         ))}
       </nav>
-      <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-6xl">{cat.name}</h1>
-      {cat.description && <p className="mt-4 max-w-2xl text-lg text-ink-2">{cat.description}</p>}
+      <SplitHeading as="h1" text={cat.name} className="mt-3 text-4xl font-semibold tracking-tight md:text-6xl" />
+      {cat.description && (
+        <SlideIn from="left" delay={0.15}>
+          <p className="mt-4 max-w-2xl text-lg text-ink-2">{cat.description}</p>
+        </SlideIn>
+      )}
 
       {children.length > 0 && (
         <ul className="no-scrollbar mt-8 flex gap-2 overflow-x-auto pb-1">
@@ -136,6 +145,9 @@ export default async function CategoryPage({ params, searchParams }: Props) {
 
       <div className="mt-10">
         <ProductGrid products={products} count={count} page={page} sort={sort} basePath={`/category/${handle}`} />
+      </div>
+      <div className="-mx-4 mt-24 md:-mx-8">
+        <KeepBuilding from={root.handle} names={names} />
       </div>
     </div>
   );

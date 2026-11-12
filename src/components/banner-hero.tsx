@@ -45,7 +45,7 @@ export function BannerHero({ quick }: { quick: { name: string; handle: string }[
   const live = pinned && !reduce;
 
   return (
-    <section ref={ref} data-hero aria-label="Welcome" className="relative h-[100dvh] bg-deep lg:h-[230vh] motion-reduce:lg:h-[100dvh]">
+    <section ref={ref} data-hero data-tone="dark" aria-label="Welcome" className="relative h-[100dvh] bg-deep lg:h-[230vh] motion-reduce:lg:h-[100dvh]">
       <div className="sticky top-0 h-[100dvh] overflow-hidden">
         {live && <FrameSequence base={DIVE.base} count={DIVE.count} progress={dive} />}
         <motion.div style={live ? { opacity: loopOpacity } : undefined} className="absolute inset-0">

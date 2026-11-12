@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ProductSummary } from "@/lib/medusa";
 import { ProductCard } from "./product-card";
+import { Reveal } from "./reveal";
 
 export const PAGE_SIZE = 36;
 
@@ -67,9 +68,9 @@ export function ProductGrid({
       {products.length ? (
         <ul className="mt-8 grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-4">
           {products.map((p, i) => (
-            <li key={p.id}>
+            <Reveal as="li" key={p.id} delay={(i % 4) * 0.06} y={24}>
               <ProductCard product={p} priority={i < 4} />
-            </li>
+            </Reveal>
           ))}
         </ul>
       ) : (

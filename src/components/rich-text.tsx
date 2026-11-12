@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Fragment, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { siteHref, type Block } from "@/content/journal";
+import { SlideIn, SplitHeading } from "./text-reveal";
 
 /** Inline: [text](/path) links and **bold**, nothing else. */
 function inline(text: string): ReactNode[] {
@@ -29,23 +30,45 @@ function inline(text: string): ReactNode[] {
   return out;
 }
 
+const hasMarkup = (s: string) => /\[[^\]]+\]\([^)]+\)|\*\*/.test(s);
+
+/**
+ * Journal body. Headings rise word by word; paragraphs and lists glide in from alternating sides as
+ * they reach the screen, so a long read keeps moving without the words themselves jumping around.
+ */
 export function RichText({ blocks }: { blocks: Block[] }) {
+  let side = 0;
   return (
     <div className="copy">
-      {blocks.map((b, i) => (
-        <Fragment key={i}>
-          {b.type === "p" && <p>{inline(b.text)}</p>}
-          {b.type === "h2" && <h2>{inline(b.text)}</h2>}
-          {b.type === "h3" && <h3>{inline(b.text)}</h3>}
-          {b.type === "ul" && (
-            <ul>
-              {b.items.map((it, j) => (
-                <li key={j}>{inline(it)}</li>
-              ))}
-            </ul>
-          )}
-        </Fragment>
-      ))}
+      {blocks.map((b, i) => {
+        if (b.type === "h2" || b.type === "h3") {
+          side = 0;
+          return hasMarkup(b.text) ? (
+            <SlideIn key={i} from="up" distance={24}>
+              {b.type === "h2" ? <h2>{inline(b.text)}</h2> : <h3>{inline(b.text)}</h3>}
+            </SlideIn>
+          ) : (
+            <SplitHeading key={i} as={b.type} text={b.text} />
+          );
+        }
+        const from = side++ % 2 === 0 ? "left" : "right";
+        if (b.type === "ul") {
+          return (
+            <SlideIn key={i} from={from} distance={40}>
+              <ul>
+                {b.items.map((it, j) => (
+                  <li key={j}>{inline(it)}</li>
+                ))}
+              </ul>
+            </SlideIn>
+          );
+        }
+        return (
+          <SlideIn key={i} from={from} distance={40}>
+            <p>{inline(b.text)}</p>
+          </SlideIn>
+        );
+      })}
     </div>
   );
 }

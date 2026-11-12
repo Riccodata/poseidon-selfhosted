@@ -17,7 +17,7 @@ export function Header({ categories }: { categories: NavCategory[] }) {
   const router = useRouter();
   const reduce = useReducedMotion();
   const { scrollY } = useScroll();
-  const [solid, setSolid] = useState(!(pathname === "/" || pathname.startsWith("/category/") || pathname === "/about"));
+  const [solid, setSolid] = useState(!(pathname === "/" || pathname.startsWith("/category/") || pathname === "/about" || pathname === "/faq"));
   const [mega, setMega] = useState(false);
   const [hover, setHover] = useState(categories[0]?.handle ?? "corals");
   const [mobile, setMobile] = useState(false);
@@ -85,8 +85,10 @@ export function Header({ categories }: { categories: NavCategory[] }) {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-[1400px] items-center gap-6 px-4 md:px-8">
-        <Link href="/" aria-label="Poseidon's Eden home" className="flex shrink-0 items-center">
-          <span className="text-[15px] font-semibold uppercase tracking-[0.22em]">Poseidon&rsquo;s Eden</span>
+        <Link href="/" aria-label="Poseidon's Eden home" className="relative flex h-11 w-[128px] shrink-0 items-center">
+          {/* the brand wordmark: silver over the water, deep blue once the bar turns light */}
+          <Image src="/media/logo-nav-light.png" alt="" width={280} height={96} priority className={`absolute h-11 w-auto transition-opacity duration-300 ${light ? "opacity-0" : "opacity-100"}`} />
+          <Image src="/media/logo-nav-dark.png" alt="" width={280} height={96} priority className={`absolute h-11 w-auto transition-opacity duration-300 ${light ? "opacity-100" : "opacity-0"}`} />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
@@ -229,7 +231,7 @@ export function Header({ categories }: { categories: NavCategory[] }) {
             className="fixed inset-0 z-50 overflow-y-auto bg-paper text-ink lg:hidden"
           >
             <div className="flex h-16 items-center justify-between px-4">
-              <span className="text-[15px] font-semibold uppercase tracking-[0.22em]">Poseidon&rsquo;s Eden</span>
+              <Image src="/media/logo-nav-dark.png" alt="Poseidon's Eden" width={280} height={96} className="h-10 w-auto" />
               <button type="button" onClick={() => setMobile(false)} aria-label="Close menu" className="flex h-10 w-10 items-center justify-center rounded-full">
                 <X size={22} />
               </button>
