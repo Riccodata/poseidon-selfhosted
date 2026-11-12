@@ -1,0 +1,117 @@
+[
+ {
+  "category": "About Poseidon's Eden",
+  "question": "How long has Poseidon's Eden been in business?",
+  "answer": "Poseidon's Eden has served saltwater hobbyists since [year]. Our team has [X] years of combined experience keeping reef tanks, fish and corals."
+ },
+ {
+  "category": "About Poseidon's Eden",
+  "question": "Where is Poseidon's Eden located?",
+  "answer": "We're based in [city, state/country]. [Add store visit hours if customers can visit.]"
+ },
+ {
+  "category": "Our Fish, Corals and Inverts",
+  "question": "Where does Poseidon's Eden source its marine life?",
+  "answer": "We work with [trusted collectors, aquaculture farms and captive-breeding partners in regions]. We choose suppliers who use responsible collection methods."
+ },
+ {
+  "category": "Our Fish, Corals and Inverts",
+  "question": "How does Poseidon's Eden make sure livestock is healthy before it ships?",
+  "answer": "Every animal is [held for X days / quarantined] in our system. We check that fish are eating, active and free of visible disease before they're listed for sale."
+ },
+ {
+  "category": "Shipping and Delivery",
+  "question": "How do you ship live fish and corals?",
+  "answer": "All livestock ships [overnight via carrier] in insulated boxes with heat or cold packs as the weather needs. Each animal is bagged with oxygen by our trained team."
+ },
+ {
+  "category": "Shipping and Delivery",
+  "question": "When will my order arrive?",
+  "answer": "Orders placed by [cutoff time] on [shipping days] ship the same day and arrive the next day. We don't ship on days when animals would sit in transit over a weekend."
+ },
+ {
+  "category": "Shipping and Delivery",
+  "question": "How much does shipping cost?",
+  "answer": "Livestock shipping is [flat rate]. Orders over [amount] ship free. [Add separate rate for supplies if different.]"
+ },
+ {
+  "category": "Shipping and Delivery",
+  "question": "Can I pick up my order instead?",
+  "answer": "[Yes, you can pick up from our store at (address) during opening hours, or collect from your nearest airport freight terminal. / Delete if not offered.]"
+ },
+ {
+  "category": "Shipping and Delivery",
+  "question": "Can I change or cancel my order after placing it?",
+  "answer": "Yes, if it hasn't been packed yet. Contact us at poseidonseden@gmail.com or +61 402 304 012 by [cutoff time] on the day before shipping. Once livestock is bagged, we can't change the order."
+ },
+ {
+  "category": "Shipping and Delivery",
+  "question": "Do you ship to my area?",
+  "answer": "We ship livestock within Australia. [Name any remote or rural areas you can't reach overnight, or that need airport pickup.]"
+ },
+ {
+  "category": "Shipping and Delivery",
+  "question": "Can I order livestock and supplies together?",
+  "answer": "Yes. [Supplies ship in the same box / ship separately], so your fish arrive on time either way."
+ },
+ {
+  "category": "Help for New Hobbyists",
+  "question": "How do I acclimate my new fish or coral?",
+  "answer": "Follow our step-by-step acclimation guide [link]. Slow acclimation is the single biggest factor in a healthy start."
+ },
+ {
+  "category": "Help for New Hobbyists",
+  "question": "Which fish and corals are best for beginners?",
+  "answer": "Browse our [Beginner collection link]. These are hardy, forgiving species that suit a new tank."
+ },
+ {
+  "category": "Deals and Rewards",
+  "question": "Are there any deals or discounts right now?",
+  "answer": "Check our [Sale page link] for current specials. Join our email list for new arrivals, flash sales and subscriber-only deals."
+ },
+ {
+  "category": "Deals and Rewards",
+  "question": "Do you have a rewards program?",
+  "answer": "[Describe points or rewards program, or delete if none.]"
+ },
+ {
+  "category": "Deals and Rewards",
+  "question": "How can I contact Poseidon's Eden?",
+  "answer": "Email poseidonseden@gmail.com, call +61 402 304 012 or use the chat on our site. We reply within [time frame] on business days."
+ },
+ {
+  "category": "Payment, Store and Services",
+  "question": "What payment options do you accept?",
+  "answer": "We accept [Visa, Mastercard, PayPal, Apple Pay, Google Pay]. [Buy now, pay later options like Afterpay are available on livestock.]"
+ },
+ {
+  "category": "Payment, Store and Services",
+  "question": "Can I visit your store?",
+  "answer": "[Yes. Our store is at (address). Opening hours: (days and times).] Our team can show you livestock in person and help plan your tank."
+ },
+ {
+  "category": "Payment, Store and Services",
+  "question": "Do you run auctions or sell value packs?",
+  "answer": "[Describe weekly auctions, bundle packs or gift cards, or delete if none.]"
+ },
+ {
+  "category": "Payment, Store and Services",
+  "question": "Do you offer aquarium maintenance or custom tank design?",
+  "answer": "[Describe services and the areas covered, or delete if none.]"
+ },
+ {
+  "category": "After Your Fish Arrives",
+  "question": "My new fish isn't eating. What should I do?",
+  "answer": "It's normal for a new fish to skip food for a day or two while it settles. Keep the lights dim, offer small amounts of frozen mysis or brine shrimp, and check your water. If it still won't eat after [X] days, contact us at poseidonseden@gmail.com."
+ },
+ {
+  "category": "After Your Fish Arrives",
+  "question": "Do you buy back or trade fish and corals?",
+  "answer": "[Describe any trade-in or buy-back program, or delete if none.]"
+ },
+ {
+  "category": "After Your Fish Arrives",
+  "question": "What is your return policy for equipment and supplies?",
+  "answer": "Unused supplies in their original packaging can be returned within [X days]. Faulty equipment is covered by [the manufacturer's warranty / our policy]. [Link to the full return policy.]"
+ }
+]

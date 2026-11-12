@@ -1,0 +1,618 @@
+[
+ {
+  "slug": "freshwater-vs-saltwater-aquarium",
+  "title": "Freshwater vs Saltwater Aquariums: Which Should You Start With?",
+  "seoTitle": "Freshwater vs Saltwater Aquarium: Which First? | Poseidon's Eden",
+  "seoDescription": "Freshwater or saltwater? Compare cost, equipment, maintenance and livestock to choose the right first aquarium, from community fish to a full reef.",
+  "excerpt": "Thinking about your first tank? Here is an honest comparison of freshwater and saltwater aquariums: cost, equipment, upkeep and the animals you can keep.",
+  "tags": [
+   "freshwater",
+   "saltwater",
+   "beginner"
+  ],
+  "cover": "/media/journal/freshwater-vs-saltwater-aquarium.png",
+  "coverAlt": "Cardinal tetra, a popular freshwater aquarium fish",
+  "author": "Ricco Laroso",
+  "date": "2026-10-22",
+  "minutes": 3,
+  "body": [
+   {
+    "type": "p",
+    "text": "Choosing between a freshwater and a saltwater aquarium is the first big decision every fishkeeper makes. Both can be stunning, both can be kept successfully at home, and both reward a little planning. The right choice comes down to your budget, the time you have for maintenance and, most of all, the animals you want to keep."
+   },
+   {
+    "type": "h2",
+    "text": "The short answer"
+   },
+   {
+    "type": "p",
+    "text": "If you are brand new to the hobby, a freshwater tank is usually the easier place to start. It costs less to set up, it is more forgiving of small mistakes and there is a huge range of colourful, hardy fish to choose from. If your heart is set on corals, clownfish and the look of a living reef, a saltwater tank is absolutely achievable for a beginner, as long as you go in with realistic expectations and a bit more patience."
+   },
+   {
+    "type": "h2",
+    "text": "Setup cost and equipment"
+   },
+   {
+    "type": "p",
+    "text": "A freshwater aquarium needs a tank, a filter, a heater for tropical species, lighting, a substrate and a water conditioner to remove chlorine and chloramine from tap water. That is a short, affordable shopping list."
+   },
+   {
+    "type": "p",
+    "text": "A saltwater aquarium needs everything above plus a few extras:"
+   },
+   {
+    "type": "ul",
+    "items": [
+     "Marine salt mix and a refractometer to measure salinity",
+     "A protein skimmer, especially for reef tanks",
+     "Rock to give beneficial bacteria a home and your fish somewhere to hide",
+     "Stronger, more specialised lighting if you plan to keep corals",
+     "Powerheads for water movement"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "You can browse everything you need in our [Equipment](/category/equipment) range, from return pumps to lighting and controllers."
+   },
+   {
+    "type": "h2",
+    "text": "Water chemistry and maintenance"
+   },
+   {
+    "type": "p",
+    "text": "Freshwater fish are generally tolerant of a range of conditions, and many popular species adapt well to local tap water once it is conditioned. Weekly partial water changes and regular filter care cover most of the work."
+   },
+   {
+    "type": "p",
+    "text": "Saltwater tanks ask for more consistency. Salinity should stay stable (most reef keepers aim for a specific gravity of about 1.025 to 1.026), and reef tanks also need alkalinity, calcium and magnesium kept in a steady range. Topping up evaporated water with fresh water (never salt water) keeps salinity from creeping up. None of this is difficult, but it does mean testing water more often."
+   },
+   {
+    "type": "h2",
+    "text": "The animals you can keep"
+   },
+   {
+    "type": "p",
+    "text": "This is where most people make their decision."
+   },
+   {
+    "type": "p",
+    "text": "Freshwater gives you everything from schooling tetras and peaceful community fish to bold [cichlids](/category/cichlids), armoured [plecos](/category/plecos), graceful [angelfish](/category/freshwater-angelfish) and true monster fish such as arowana and stingrays. You can also grow live plants for a lush, natural look."
+   },
+   {
+    "type": "p",
+    "text": "Saltwater gives you access to the colours of the ocean: clownfish, tangs, wrasses and gobies, plus invertebrates such as shrimp, snails and crabs. A reef tank adds [corals](/category/corals), which are living animals in their own right and the main reason many people go marine."
+   },
+   {
+    "type": "h2",
+    "text": "Which should you choose?"
+   },
+   {
+    "type": "p",
+    "text": "Choose freshwater if you want a lower start-up cost, a gentler learning curve, live plants or large, characterful fish like oscars and plecos."
+   },
+   {
+    "type": "p",
+    "text": "Choose saltwater if you dream of corals and reef fish, enjoy a bit of water chemistry and are happy to start slowly and add livestock over months rather than weeks."
+   },
+   {
+    "type": "p",
+    "text": "Whichever you pick, the golden rules are the same: cycle the tank before adding fish, stock slowly, research every species before you buy it and keep up with regular water changes. Explore our [freshwater collection](/freshwater) or our marine [fish](/category/fish) and [corals](/category/corals) to start planning your tank, and check our [FAQ](/faq) if you have questions."
+   }
+  ]
+ },
+ {
+  "slug": "nitrogen-cycle-explained-how-to-cycle-an-aquarium",
+  "title": "The Nitrogen Cycle Explained: How to Cycle a New Aquarium",
+  "seoTitle": "How to Cycle an Aquarium: Nitrogen Cycle Guide | Poseidon's Eden",
+  "seoDescription": "Learn how the nitrogen cycle works and how to cycle a new freshwater or saltwater aquarium safely before adding fish, step by step.",
+  "excerpt": "New tank syndrome is the number one reason first fish are lost. Here is how the nitrogen cycle works and how to cycle your aquarium properly before adding livestock.",
+  "tags": [
+   "nitrogencycle",
+   "beginner",
+   "waterquality"
+  ],
+  "cover": "/media/journal/nitrogen-cycle-explained-how-to-cycle-an-aquarium.png",
+  "coverAlt": "Blue frontosa cichlid",
+  "author": "Ricco Laroso",
+  "date": "2026-10-22",
+  "minutes": 2,
+  "body": [
+   {
+    "type": "p",
+    "text": "If there is one thing every new fishkeeper should understand before buying fish, it is the nitrogen cycle. A brand new tank full of clean water looks perfect, but it is missing the bacteria that keep fish alive. Adding fish too soon is the most common cause of \"new tank syndrome\" and early losses."
+   },
+   {
+    "type": "h2",
+    "text": "What is the nitrogen cycle?"
+   },
+   {
+    "type": "p",
+    "text": "Fish produce waste, and uneaten food and decaying matter break down too. All of this releases **ammonia**, which is toxic to fish even in small amounts."
+   },
+   {
+    "type": "p",
+    "text": "In an established aquarium, two groups of beneficial bacteria deal with it:"
+   },
+   {
+    "type": "ul",
+    "items": [
+     "The first group converts ammonia into **nitrite**, which is also toxic.",
+     "The second group converts nitrite into **nitrate**, which is far less harmful and is removed with regular water changes (and used by live plants)."
+    ]
+   },
+   {
+    "type": "p",
+    "text": "These bacteria live mostly in your filter media, substrate and rock, not floating in the water. \"Cycling\" a tank simply means growing a large enough population of them before fish arrive."
+   },
+   {
+    "type": "h2",
+    "text": "How to cycle a tank without fish"
+   },
+   {
+    "type": "p",
+    "text": "The kindest and most reliable method is a fishless cycle:"
+   },
+   {
+    "type": "ul",
+    "items": [
+     "Set up the tank with the filter and heater running, and condition the water to remove chlorine.",
+     "Add a source of ammonia. Many aquarists dose pure aquarium ammonia to about 2 ppm, or add a small amount of fish food every day.",
+     "Add a bottled beneficial bacteria product if you like. It is not essential, but it often shortens the process.",
+     "Test the water every few days with an ammonia, nitrite and nitrate test kit."
+    ]
+   },
+   {
+    "type": "p",
+    "text": "At first you will see ammonia rise, then nitrite appear as the first bacteria establish. Later, nitrite falls and nitrate rises as the second group catches up."
+   },
+   {
+    "type": "h2",
+    "text": "How do I know the cycle is finished?"
+   },
+   {
+    "type": "p",
+    "text": "Your tank is cycled when it can convert a full dose of ammonia to nitrate within about 24 hours, with ammonia and nitrite both reading zero and nitrate present. This commonly takes four to six weeks, sometimes longer. Do a large water change to bring nitrate down before adding your first fish."
+   },
+   {
+    "type": "h2",
+    "text": "Keeping the cycle healthy"
+   },
+   {
+    "type": "ul",
+    "items": [
+     "Add fish gradually, a few at a time, so the bacteria can keep up with the extra waste.",
+     "Never rinse filter media under the tap. Chlorine kills beneficial bacteria. Rinse it gently in old tank water during a water change instead.",
+     "Do not replace all your filter media at once.",
+     "Keep testing, especially in the first few months. Ammonia or nitrite above zero is a sign something is wrong.",
+     "Do not overfeed. Uneaten food is one of the biggest sources of ammonia."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "Freshwater and saltwater"
+   },
+   {
+    "type": "p",
+    "text": "The nitrogen cycle works the same way in both, although saltwater tanks often cycle a little more slowly. Live rock that is already populated with bacteria can speed things up in a marine tank."
+   },
+   {
+    "type": "p",
+    "text": "Reliable test kits are one of the best investments you can make. Browse our [water testing](/category/water-testing) and [filter media](/category/filter-media) ranges, and when your tank is ready, explore our [freshwater](/freshwater) and marine [fish](/category/fish)."
+   }
+  ]
+ },
+ {
+  "slug": "cichlid-care-guide",
+  "title": "Cichlid Care 101: How to Choose and Keep Cichlids",
+  "seoTitle": "Cichlid Care Guide: Choosing and Keeping Cichlids | Poseidon's Eden",
+  "seoDescription": "A practical guide to cichlid care: tank size, water parameters, diet, aquascaping and tank mates for oscars, discus, angelfish, frontosa and more.",
+  "excerpt": "Cichlids are some of the most intelligent and colourful fish in the hobby. Here is what you need to know about tank size, water, diet and tank mates before you bring one home.",
+  "tags": [
+   "cichlids",
+   "freshwater",
+   "oscar"
+  ],
+  "cover": "/media/journal/cichlid-care-guide.png",
+  "coverAlt": "Copper red oscar cichlid",
+  "author": "Ricco Laroso",
+  "date": "2026-10-22",
+  "minutes": 2,
+  "body": [
+   {
+    "type": "p",
+    "text": "Cichlids are one of the most popular families of freshwater fish, and for good reason. They are colourful, intelligent and full of personality. Many recognise their owners, rearrange their tank and raise their own young. They also range from small, peaceful species to large, powerful fish, so choosing the right cichlid for your setup is essential."
+   },
+   {
+    "type": "h2",
+    "text": "Know where your cichlid comes from"
+   },
+   {
+    "type": "p",
+    "text": "\"Cichlid\" covers well over a thousand species, and their needs differ depending on where they come from in the wild."
+   },
+   {
+    "type": "ul",
+    "items": [
+     "**South and Central American cichlids** include [oscars](/category/oscars), [discus](/category/discus), [angelfish](/category/freshwater-angelfish), severums, eartheaters and [pike cichlids](/category/pike-cichlids). Most come from soft, slightly acidic to neutral water.",
+     "**African rift lake cichlids**, such as frontosa from Lake Tanganyika, come from hard, alkaline water with a high pH."
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Matching your water to the species is one of the simplest ways to keep cichlids healthy and showing their best colours."
+   },
+   {
+    "type": "h2",
+    "text": "Tank size"
+   },
+   {
+    "type": "p",
+    "text": "Cichlids need more space than many people expect, especially as they grow."
+   },
+   {
+    "type": "ul",
+    "items": [
+     "Oscars can reach about 30 cm and need a large tank, ideally 300 litres or more for one adult.",
+     "Discus and angelfish are tall-bodied fish that appreciate a tall tank and stable conditions.",
+     "Pike cichlids and larger Central American species need long tanks with plenty of swimming room."
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Buying the right size tank from the start saves stress, aggression and an expensive upgrade later."
+   },
+   {
+    "type": "h2",
+    "text": "Water parameters and filtration"
+   },
+   {
+    "type": "p",
+    "text": "Most South American cichlids do well at around 26 to 28°C, and discus prefer it warmer, often 28 to 30°C, with very clean water. Rift lake cichlids prefer a pH of about 7.8 to 9."
+   },
+   {
+    "type": "p",
+    "text": "Many cichlids are messy eaters and produce a lot of waste, so strong filtration and regular water changes (often 25 to 30 percent weekly) are essential. Check every listing's Quick Care Guide for the specific temperature, pH and size of that species."
+   },
+   {
+    "type": "h2",
+    "text": "Diet"
+   },
+   {
+    "type": "p",
+    "text": "Feed a high-quality cichlid pellet as the staple, and add variety with frozen foods such as bloodworm, brine shrimp and mysis. Large predatory species benefit from meatier foods, while some eartheaters and herbivorous species need more vegetable matter. Feed only what is eaten within a couple of minutes to protect water quality. You will find staples in our [fish food](/category/fish-food) range."
+   },
+   {
+    "type": "h2",
+    "text": "Aquascaping and behaviour"
+   },
+   {
+    "type": "p",
+    "text": "Cichlids are territorial. Use rocks, caves and driftwood to create clear territories and break lines of sight. Make sure rockwork is stable, because many cichlids dig. Some species will uproot or eat live plants, so choose hardy plants or go plant-free with larger fish."
+   },
+   {
+    "type": "h2",
+    "text": "Choosing tank mates"
+   },
+   {
+    "type": "p",
+    "text": "Combine cichlids of similar size and temperament, and research before mixing species from different regions. Avoid small fish that a large cichlid could eat. When in doubt, a single showpiece fish such as an oscar or a well-planned group of one species is often the most rewarding setup."
+   },
+   {
+    "type": "p",
+    "text": "Ready to choose? Browse all of our [cichlids](/category/cichlids), from flowerhorns and parrot cichlids to rare pike cichlids, or explore the full [freshwater collection](/freshwater)."
+   }
+  ]
+ },
+ {
+  "slug": "beginners-guide-to-plecos",
+  "title": "A Beginner's Guide to Plecos: Choosing the Right Pleco for Your Tank",
+  "seoTitle": "Pleco Care Guide: Choosing the Right Pleco | Poseidon's Eden",
+  "seoDescription": "Plecos are not all algae eaters. Learn about L-numbers, adult sizes, diet, driftwood and water conditions so you choose the right pleco for your aquarium.",
+  "excerpt": "Plecos are much more than algae eaters. From small bristlenose to striking L-number species, here is how to choose and care for the right pleco.",
+  "tags": [
+   "plecos",
+   "catfish",
+   "freshwater"
+  ],
+  "cover": "/media/journal/beginners-guide-to-plecos.png",
+  "coverAlt": "L191 broken line royal pleco",
+  "author": "Ricco Laroso",
+  "date": "2026-10-22",
+  "minutes": 2,
+  "body": [
+   {
+    "type": "p",
+    "text": "Plecos are armoured catfish from South America, and they are some of the most fascinating fish you can keep. Many people buy their first pleco as an \"algae eater\", but there is far more to these fish than cleaning glass, and choosing the right one matters."
+   },
+   {
+    "type": "h2",
+    "text": "What are L-numbers?"
+   },
+   {
+    "type": "p",
+    "text": "Many plecos are known by an L-number, such as L191 or L046. The system began because new species were being discovered and exported faster than scientists could formally describe them. Each new pleco was given a number so that fishkeepers could tell them apart. Some L-number fish now have scientific names, but the numbers are still widely used."
+   },
+   {
+    "type": "h2",
+    "text": "Adult size: check before you buy"
+   },
+   {
+    "type": "p",
+    "text": "This is the most important thing to research."
+   },
+   {
+    "type": "ul",
+    "items": [
+     "Bristlenose plecos usually stay around 12 to 15 cm, which makes them a great fit for many community tanks.",
+     "Many L-number species stay medium sized.",
+     "The common pleco and some royal plecos can grow to 30 cm or much more and need very large aquariums."
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Always check the adult size on the listing's Quick Care Guide, not the size of the fish in the shop."
+   },
+   {
+    "type": "h2",
+    "text": "Not every pleco eats algae"
+   },
+   {
+    "type": "p",
+    "text": "Plecos have very different diets:"
+   },
+   {
+    "type": "ul",
+    "items": [
+     "**Algae and vegetable grazers** enjoy algae wafers and blanched vegetables such as zucchini and cucumber.",
+     "**Wood eaters**, such as royal plecos (Panaque), rasp on driftwood as part of their diet, so real driftwood in the tank is essential.",
+     "**Omnivores and carnivores**, such as many of the striking zebra and spotted species, need meaty foods like sinking pellets, bloodworm and brine shrimp."
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Most plecos feed at night, so offer sinking food after the lights go out to make sure it reaches them."
+   },
+   {
+    "type": "h2",
+    "text": "Water and setup"
+   },
+   {
+    "type": "p",
+    "text": "Many plecos come from warm, fast-flowing, well-oxygenated rivers. Aim for clean water, good filtration and some current. Provide plenty of caves, rock and driftwood, because plecos like to wedge themselves into hiding places, and males of many species guard caves."
+   },
+   {
+    "type": "p",
+    "text": "Plecos can be territorial with each other, so give each one its own cave if you keep more than one."
+   },
+   {
+    "type": "h2",
+    "text": "Good tank mates"
+   },
+   {
+    "type": "p",
+    "text": "Plecos generally ignore other fish and do well with peaceful to semi-aggressive species of a similar size. They pair well with tetras, rainbowfish, angelfish and many cichlids, as long as there is enough room and hiding space on the bottom."
+   },
+   {
+    "type": "h2",
+    "text": "Ready to choose your pleco?"
+   },
+   {
+    "type": "p",
+    "text": "Browse our range of [plecos](/category/plecos), including rare L-number species, or see our wider [catfish](/category/catfish) collection with Synodontis and Corydoras. Every listing includes a Quick Care Guide with adult size, temperature and diet so you can choose with confidence."
+   }
+  ]
+ },
+ {
+  "slug": "sps-lps-soft-corals-guide",
+  "title": "SPS, LPS and Soft Corals: A Beginner's Guide to Coral Types",
+  "seoTitle": "SPS vs LPS vs Soft Corals: Beginner's Guide | Poseidon's Eden",
+  "seoDescription": "What is the difference between SPS, LPS and soft corals? Learn light, flow and water needs for each coral type and which corals suit beginners.",
+  "excerpt": "Soft, LPS or SPS? Here is what those coral groups mean, what each one needs and which corals are the best place to start your reef.",
+  "tags": [
+   "corals",
+   "reef",
+   "beginner"
+  ],
+  "cover": "/media/journal/sps-lps-soft-corals-guide.jpg",
+  "coverAlt": "Twisted Nether Acanthophyllia, an LPS coral",
+  "author": "Ricco Laroso",
+  "date": "2026-10-22",
+  "minutes": 2,
+  "body": [
+   {
+    "type": "p",
+    "text": "Walk into any reef keeping conversation and you will hear three terms over and over: soft corals, LPS and SPS. They describe the three main groups of corals kept in home aquariums, and knowing the difference helps you choose corals that will thrive in your tank."
+   },
+   {
+    "type": "h2",
+    "text": "Soft corals"
+   },
+   {
+    "type": "p",
+    "text": "Soft corals have no hard, stony skeleton. They include leather corals, mushroom corals, zoanthids, xenia and green star polyps."
+   },
+   {
+    "type": "ul",
+    "items": [
+     "**Light and flow:** low to moderate.",
+     "**Difficulty:** usually the easiest corals to keep, and very forgiving of small swings in water quality.",
+     "**Good to know:** some soft corals grow quickly and can spread across rock. Zoanthids and palythoa can contain a potent toxin called palytoxin, so always wear gloves and eye protection when handling or fragging them."
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Browse our [soft corals](/category/soft-corals), [mushroom corals](/category/mushroom-corals) and [zoanthids](/category/zoanthids)."
+   },
+   {
+    "type": "h2",
+    "text": "LPS corals"
+   },
+   {
+    "type": "p",
+    "text": "LPS stands for **large polyp stony** corals. They build a calcium carbonate skeleton covered in large, fleshy polyps. Popular examples include hammer and frogspawn corals, torches, acans, chalices, duncans and bubble corals."
+   },
+   {
+    "type": "ul",
+    "items": [
+     "**Light and flow:** moderate.",
+     "**Difficulty:** a great next step once your tank is stable.",
+     "**Good to know:** many LPS corals extend long sweeper tentacles at night that can sting their neighbours, so give them space. Most benefit from occasional target feeding."
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Explore our [LPS corals](/category/lps-corals)."
+   },
+   {
+    "type": "h2",
+    "text": "SPS corals"
+   },
+   {
+    "type": "p",
+    "text": "SPS stands for **small polyp stony** corals. They have small polyps on a hard skeleton and include acropora, montipora, pocillopora and stylophora."
+   },
+   {
+    "type": "ul",
+    "items": [
+     "**Light and flow:** high.",
+     "**Difficulty:** the most demanding group, best for experienced reef keepers with a mature, very stable tank.",
+     "**Good to know:** SPS corals reward stable alkalinity, calcium and magnesium with incredible colour and growth."
+    ]
+   },
+   {
+    "type": "p",
+    "text": "See our [SPS corals](/category/sps-corals)."
+   },
+   {
+    "type": "h2",
+    "text": "Water parameters for a healthy reef"
+   },
+   {
+    "type": "p",
+    "text": "Most reef keepers aim for:"
+   },
+   {
+    "type": "ul",
+    "items": [
+     "Temperature: about 25 to 26.5°C",
+     "Salinity: specific gravity 1.025 to 1.026",
+     "Alkalinity: about 7 to 11 dKH, kept stable",
+     "Calcium: about 400 to 450 ppm",
+     "Magnesium: about 1250 to 1400 ppm",
+     "Nitrate and phosphate low, but not zero"
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Stability matters more than chasing perfect numbers."
+   },
+   {
+    "type": "h2",
+    "text": "Where should a beginner start?"
+   },
+   {
+    "type": "p",
+    "text": "Start with soft corals and hardy LPS once your tank has finished cycling and has been stable for a while. Add corals gradually, keep an eye on how each one reacts to your light and flow, and dip new corals before adding them to your display. You can find dips in our [coral dips](/category/coral-dips) range and reef lights in [lighting](/category/lighting)."
+   },
+   {
+    "type": "p",
+    "text": "Browse all of our [corals](/category/corals) to start planning your reef."
+   }
+  ]
+ },
+ {
+  "slug": "how-to-acclimate-new-fish",
+  "title": "How to Acclimate New Fish Safely: A Step-by-Step Guide",
+  "seoTitle": "How to Acclimate New Aquarium Fish Safely | Poseidon's Eden",
+  "seoDescription": "Step-by-step guide to acclimating new aquarium fish and invertebrates: floating, drip acclimation, quarantine and how to avoid pH and temperature shock.",
+  "excerpt": "The first hour in a new tank matters. Here is how to acclimate new fish and invertebrates safely, from floating the bag to drip acclimation and quarantine.",
+  "tags": [
+   "acclimation",
+   "beginner",
+   "fishcare"
+  ],
+  "cover": "/media/journal/how-to-acclimate-new-fish.png",
+  "coverAlt": "Angelfish",
+  "author": "Ricco Laroso",
+  "date": "2026-10-22",
+  "minutes": 2,
+  "body": [
+   {
+    "type": "p",
+    "text": "Bringing home new fish is exciting, but the move from bag to aquarium is one of the most stressful moments in a fish's life. A careful acclimation helps your new arrival settle in and lowers the risk of shock and disease."
+   },
+   {
+    "type": "h2",
+    "text": "Before you start"
+   },
+   {
+    "type": "ul",
+    "items": [
+     "Make sure your aquarium is fully cycled and the water is stable. If you are not sure, read our guide to [the nitrogen cycle](/post/nitrogen-cycle-explained-how-to-cycle-an-aquarium).",
+     "Dim or switch off the aquarium lights. Bright light after hours in a dark box is stressful.",
+     "Have a clean bucket, scissors and a net ready."
+    ]
+   },
+   {
+    "type": "h2",
+    "text": "Step 1: Match the temperature"
+   },
+   {
+    "type": "p",
+    "text": "Float the sealed bag in your aquarium for about 15 to 20 minutes so the water inside slowly reaches the same temperature as your tank."
+   },
+   {
+    "type": "h2",
+    "text": "Step 2: Mix in tank water slowly"
+   },
+   {
+    "type": "p",
+    "text": "Next, gradually introduce your tank water so the fish can adjust to its pH and hardness (and salinity, for marine fish)."
+   },
+   {
+    "type": "p",
+    "text": "The simple method: open the bag and add a small cup of tank water every few minutes until the volume has roughly doubled."
+   },
+   {
+    "type": "p",
+    "text": "The drip method: place the fish and its water in a clean bucket and use airline tubing with a loose knot or valve to drip tank water in at a few drops per second over 30 to 60 minutes. This is best for sensitive fish, shrimp, snails and other invertebrates."
+   },
+   {
+    "type": "h2",
+    "text": "Step 3: Move the fish, not the water"
+   },
+   {
+    "type": "p",
+    "text": "Net the fish into the aquarium and throw away the bag water. Shipping water can contain waste, ammonia and anything picked up along the way, so it should never be poured into your display tank."
+   },
+   {
+    "type": "h2",
+    "text": "A note on pH and ammonia"
+   },
+   {
+    "type": "p",
+    "text": "Fish that have been in a bag for a long time sit in water that builds up ammonia, while carbon dioxide keeps the pH low, which keeps that ammonia less toxic. Once the bag is opened, carbon dioxide escapes, the pH rises and the ammonia becomes more harmful. For long-shipped fish, avoid stretching the acclimation out for hours once the bag is open."
+   },
+   {
+    "type": "h2",
+    "text": "Quarantine new arrivals"
+   },
+   {
+    "type": "p",
+    "text": "A separate quarantine tank is one of the best habits in fishkeeping. Keeping new fish on their own for two to four weeks lets you watch for signs of illness and treat problems before they reach your main tank. Corals should be dipped before going into your reef. See our [medications](/category/medications) and [coral dips](/category/coral-dips) ranges."
+   },
+   {
+    "type": "h2",
+    "text": "After acclimation"
+   },
+   {
+    "type": "p",
+    "text": "Keep the lights low for the rest of the day, do not feed until the next day, and watch your new fish for normal swimming and breathing. Some fish hide for a few days. This is normal while they learn their new home."
+   },
+   {
+    "type": "p",
+    "text": "Have more questions about delivery and arrival? Visit our [FAQ](/faq)."
+   }
+  ]
+ }
+]

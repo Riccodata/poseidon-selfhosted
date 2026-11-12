@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Poseidon's Eden palette: "Tidepool".
+  Cool sea-foam paper, deep-water ink, one coral accent. No gradients-as-decoration, no glows.
+  Shapes: product and media tiles 10px; buttons, chips and inputs are full pills. That rule holds
+  everywhere.
+*/
+@theme {
+  --color-paper: #f2f5f3;
+  --color-paper-2: #e6ecea;
+  --color-tile: #fbfcfb;
+  --color-ink: #0e1d22;
+  --color-ink-2: #36494f;
+  --color-ink-3: #56696e;
+  --color-line: #d2dcd8;
+  --color-deep: #08161b;
+  --color-deep-2: #0f252c;
+  --color-deep-3: #173640;
+  --color-foam: #e8f0ed;
+  --color-foam-2: #a9bdb8;
+  --color-coral: #c8553a;
+  --color-coral-hover: #b1472f;
+  --color-sea: #1e4b6b;
+
+  --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-tile: 10px;
+
+  --ease-tide: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection {
+  background: var(--color-coral);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-coral);
+  outline-offset: 3px;
+}
+
+/* Film grain over the deep sections only, on a fixed non-interactive layer. */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Product descriptions and journal bodies come in as simple HTML / blocks. */
+.copy {
+  color: var(--color-ink-2);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+.copy p {
+  margin: 0 0 1em;
+  max-width: 68ch;
+}
+.copy h2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+  margin: 2.2em 0 0.6em;
+}
+.copy h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin: 1.8em 0 0.5em;
+}
+.copy ul {
+  margin: 0 0 1.2em;
+  padding-left: 1.1em;
+  max-width: 68ch;
+}
+.copy li {
+  margin: 0.35em 0;
+  list-style: disc;
+}
+.copy li::marker {
+  color: var(--color-coral);
+}
+.copy a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-coral);
+  text-underline-offset: 3px;
+}
+.copy strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
