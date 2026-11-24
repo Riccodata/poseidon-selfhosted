@@ -103,10 +103,13 @@ export default async function ProductPage({ params }: Props) {
             <EnvelopeSimple size={18} /> Ask about this
           </a>
 
-          <ul className="mt-8 space-y-3 border-t border-line pt-6 text-sm text-ink-2">
-            <li className="flex gap-3"><Truck size={20} className="shrink-0 text-ink" />Livestock ships within Australia in insulated boxes, bagged with oxygen.</li>
-            <li className="flex gap-3"><ShieldCheck size={20} className="shrink-0 text-ink" />Live Arrival Guarantee: tell us within 24 hours for store credit or a replacement.</li>
-          </ul>
+          {/* livestock delivery promises only belong on livestock: a pump is not bagged with oxygen */}
+          {livestock && (
+            <ul className="mt-8 space-y-3 border-t border-line pt-6 text-sm text-ink-2">
+              <li className="flex gap-3"><Truck size={20} className="shrink-0 text-ink" />Livestock ships within Australia in insulated boxes, bagged with oxygen.</li>
+              <li className="flex gap-3"><ShieldCheck size={20} className="shrink-0 text-ink" />Live Arrival Guarantee: tell us within 24 hours for store credit or a replacement.</li>
+            </ul>
+          )}
 
           {factsTitle && facts.length > 0 && <FactTiles title={factsTitle} facts={facts} />}
 
