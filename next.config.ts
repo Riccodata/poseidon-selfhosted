@@ -17,6 +17,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "photos.hello-shop.app", pathname: "/poseidon/**" },
       { protocol: "https", hostname: "static.wixstatic.com", pathname: "/media/**" },
+      // Print-on-demand mockups are hot-linked from Printify.
+      { protocol: "https", hostname: "images.printify.com", pathname: "/mockup/**" },
     ],
     formats: ["image/avif", "image/webp"],
     deviceSizes: [390, 640, 828, 1080, 1280, 1600, 1920],
